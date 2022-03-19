@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="lateral">
+            <br>
+            <a href="#">
+                <img src="./assets/img/PokBall_icon.png" alt="Pokéball">
+                <h1>Pokédex</h1>
+            </a>    
+            <br><br><hr><br>
+            <h3>¿Qué Pokémon buscas?</h3><br>
+            <form action="" onsubmit="searchPokemon(event)">
+                <input poke-form type="text" name="pokemon" autocomplete="off" placeholder="Presiona Enter para buscar">
+            </form>
+            <table>
+                <tr>
+                    <td><a poke-ant-link href="#"><img poke-ant-img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png" alt="Anterior">Anterior</a></td>
+                    <td><a href="#"><img poke-act-img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png" alt="Actual">Actual</a></td>
+                    <td><a poke-sig-link href="#"><img poke-sig-img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png" alt="Siguiente">Siguiente</a></td>
+                </tr>
+            </table><br>
+            <h6>Diseñado por <a href="https://linktr.ee/alemango" target="blank">Alemango</a></h6>
+        </div>    
+        <div data-poke-card class="contenido">
+            <div>
+                <div data-poke-img-container class="img-container">
+                    <img data-poke-img class="poke-img" src="./assets/img/PokBall_icon.png"/>
+                </div>
+            </div>
+            <div class="derecha">
+                <div class="nombre">
+                    <div data-poke-name class="name">Inicia tu búsqueda</div>
+                    <div data-poke-id></div>
+                </div>
+                <div class="tipos">
+                    <div data-poke-types class="poke-types"></div>
+                </div>
+                <div data-poke-stats class="poke-stats"></div>
+            </div>                
+        </div>
+    </div>
+    <footer>
+        <script src="./script.js"></script>
+    </footer>
+</body>
+</html>
